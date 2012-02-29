@@ -16,8 +16,7 @@
 		<constructor-arg name="databaseName" value="pongme" />
 
 	</bean>
-     <bean id="pointRepository" class="com.sk.pongme.data.PointRepository2"/>
-	<context:annotation-config />
+     <context:annotation-config />
 
 	
 
