@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class PoiData {
+public class PointData {
     @Id
     private ObjectId id;
     private String title;
@@ -21,7 +21,7 @@ public class PoiData {
     private double[] location;
     private String category;
 
-    public PoiData(){
+    public PointData(){
     }
 
     public ObjectId getId() {
@@ -74,7 +74,7 @@ public class PoiData {
 
 	@Override
 	public String toString() {
-		return "PoiData [id=" + id + ", title=" + title + ", addresse="
+		return "PointData [id=" + id + ", title=" + title + ", addresse="
 				+ addresse + ", description=" + description + ", location="
 				+ Arrays.toString(location) + ", category=" + category + "]";
 	}

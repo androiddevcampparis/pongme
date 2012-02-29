@@ -3,6 +3,7 @@ package com.sk.pongme.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sk.pongme.domain.PointData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.geo.Distance;
@@ -14,37 +15,35 @@ import org.springframework.data.mongodb.core.query.NearQuery;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.sk.pongme.domain.PoiData;
-
 
 @Repository
-public class POIRepository {
+public class PointRepository {
 
 	@Autowired
 	private MongoTemplate mongoTemplate;
 	
 	
 
-	public void add(PoiData poi){
-		mongoTemplate.save(poi);
+	public void add(PointData point){
+		mongoTemplate.save(point);
 	}
 
-	public List<PoiData> findAll(){
-		return mongoTemplate.findAll(PoiData.class);
+	public List<PointData> findAll(){
+		return mongoTemplate.findAll(PointData.class);
 	}
 
-	public List<PoiData> findPoiDataByTitle(String title){
+	public List<PointData> findPoiDataByTitle(String title){
 		Query query = new Query(new Criteria().where("title").is(title));
 
-		return mongoTemplate.find(query, PoiData.class);
+		return mongoTemplate.find(query, PointData.class);
 	}
 	
 	
-	public List<PoiData> findPoiNearbyWithCoordinates(double lon, double lat){
+	public List<PointData> findPoiNearbyWithCoordinates(double lon, double lat){
 	    NearQuery nq = NearQuery.near(lon, lat).maxDistance(new Distance(0.5, Metrics.KILOMETERS));
-		GeoResults<PoiData> georesults = mongoTemplate.geoNear(nq, PoiData.class);
-		List<PoiData> lp = new ArrayList<PoiData>();
-		for (GeoResult<PoiData> geoResult : georesults.getContent()){
+		GeoResults<PointData> georesults = mongoTemplate.geoNear(nq, PointData.class);
+		List<PointData> lp = new ArrayList<PointData>();
+		for (GeoResult<PointData> geoResult : georesults.getContent()){
 			lp.add( geoResult.getContent());
 		}
 			
@@ -52,7 +51,7 @@ public class POIRepository {
 		
 	}
 	
-	public List<PoiData> findPoiNearBy(PoiData p){
+	public List<PointData> findPoiNearBy(PointData p){
 		double x = p.getLocation()[0];
 		double y = p.getLocation()[1];
 		
