@@ -1,0 +1,87 @@
+package com.sk.pongme.data;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.mongodb.core.MongoTemplate;
+
+
+
+import com.sk.pongme.domain.PoiData;
+
+
+public class DataLoader {
+	private MongoTemplate mongoTemplate;
+
+	public DataLoader(){
+	}
+
+	public void init(){
+		//To be removed, use Spring testing instead with container instantiation
+		ApplicationContext ctx=
+				new ClassPathXmlApplicationContext(
+						this.getClass().getResource("/app-context.xml").toExternalForm());
+
+		mongoTemplate = (MongoTemplate)ctx.getBean("mongoTemplate");
+	}
+
+
+	public void loadAndSaveEntriesFromFiles() throws IOException{
+
+		URL url = this.getClass().getResource("/All_sauf_voies.csv");
+		File file = new File(url.getFile());
+
+		BufferedReader buffer;
+		try {
+			buffer = new BufferedReader(new FileReader(file));
+			String line;
+
+			while ((line =buffer.readLine())!=null) {
+
+				String[] splitted = line.split("\\t");
+				PoiData poiData= new PoiData();
+
+				poiData.setTitle(splitted[0]);
+				poiData.setDescription(splitted[1]);
+				poiData.setAddresse(splitted[2]);
+				poiData.setLocation(new double[]{
+						Double.valueOf(splitted[4]),
+						Double.valueOf(splitted[3])
+				});
+				poiData.setCategory(splitted[5]);
+				
+				mongoTemplate.save(poiData);
+
+			}
+		}catch (IOException ex){
+
+			throw ex;
+		}
+
+	}
+	
+	public static void main(String[] args) {
+		DataLoader dl = new DataLoader();
+		dl.init();
+		try {
+			dl.loadAndSaveEntriesFromFiles();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+	}
+
+
+
+
+
+
+}
