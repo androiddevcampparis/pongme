@@ -4,12 +4,15 @@ import com.sk.pongme.domain.PointData;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 
 public class DataLoader {
@@ -28,13 +31,17 @@ public class DataLoader {
 	}
 
 
-	public void loadAndSaveEntriesFromFiles() throws IOException{
+	public void loadAndSaveEntriesFromFiles() throws Exception, IOException {
+        if (mongoTemplate == null){
+            throw new RuntimeException("MongoTemplate is not initialzed, check your spring conf");
+        }
 
 		URL url = this.getClass().getResource("/All_sauf_voies.csv");
 		File file = new File(url.getFile());
 
 		BufferedReader buffer;
 		try {
+            mongoTemplate.dropCollection(PointData.class);
 			buffer = new BufferedReader(new FileReader(file));
 			String line;
 
@@ -51,7 +58,6 @@ public class DataLoader {
 						Double.valueOf(splitted[3])
 				});
 				pointData.setCategory(splitted[5]);
-				
 				mongoTemplate.save(pointData);
 
 			}
@@ -61,20 +67,35 @@ public class DataLoader {
 		}
 
 	}
+    public List<PointData> findPointDataByTitle(String title){
+		Query query = new Query().addCriteria(
+                new Criteria().where("title").is(title));
+
+		return mongoTemplate.find(query, PointData.class);
+	}
+
+    public List<PointData> findPointDataByCategorie(String categorie){
+
+        Query query = new Query().addCriteria(
+                 new Criteria().where("category").is(categorie)
+        );
+
+        return mongoTemplate.find(query, PointData.class);
+	}
+
+
 	
 	public static void main(String[] args) {
 		DataLoader dl = new DataLoader();
 		dl.init();
-		try {
-			dl.loadAndSaveEntriesFromFiles();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+        for (PointData p : dl.findPointDataByTitle("Platane"+"\\s"+ "Commun")){
+            System.out.println(p);
+        }
 
 
 
-	}
+    }
 
 
 
