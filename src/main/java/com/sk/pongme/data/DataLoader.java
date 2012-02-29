@@ -4,15 +4,12 @@ import com.sk.pongme.domain.PointData;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 
 
 public class DataLoader {
@@ -67,31 +64,10 @@ public class DataLoader {
 		}
 
 	}
-    public List<PointData> findPointDataByTitle(String title){
-		Query query = new Query().addCriteria(
-                new Criteria().where("title").is(title));
 
-		return mongoTemplate.find(query, PointData.class);
-	}
-
-    public List<PointData> findPointDataByCategorie(String categorie){
-
-        Query query = new Query().addCriteria(
-                 new Criteria().where("category").is(categorie)
-        );
-
-        return mongoTemplate.find(query, PointData.class);
-	}
-
-
-	
 	public static void main(String[] args) {
 		DataLoader dl = new DataLoader();
 		dl.init();
-
-        for (PointData p : dl.findPointDataByTitle("Platane"+"\\s"+ "Commun")){
-            System.out.println(p);
-        }
 
 
 
