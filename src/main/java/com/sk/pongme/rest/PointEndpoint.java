@@ -1,15 +1,14 @@
 package com.sk.pongme.rest;
 
-import com.sk.pongme.data.DataLoader;
 import com.sk.pongme.data.PointRepository;
 import com.sk.pongme.domain.PointData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.mongodb.core.geo.Distance;
 import org.springframework.data.mongodb.core.geo.Metrics;
 import org.springframework.data.mongodb.core.geo.Point;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -17,19 +16,18 @@ import javax.ws.rs.Produces;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 @Path("/api/")
+@Component
 @Scope("request")
 public class PointEndpoint {
 
-    @Inject
+    @Autowired
     private PointRepository pointRepository;
 
-    @Inject
-    private DataLoader dl;
-
     public PointEndpoint(){
+
     }
+
 
     @GET
     @Path("/poi/{requesturl}")
@@ -55,9 +53,5 @@ public class PointEndpoint {
 
         return new PointListResource(pointList);
     }
-
-
-
-
 
 }

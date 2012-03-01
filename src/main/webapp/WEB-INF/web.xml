@@ -5,17 +5,18 @@
 <web-app>
     <display-name>Pongme Backend Server</display-name>
 
-    <!--  Spring Container configuration-->
+    <!-- Spring Container configuration-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:app-context.xml</param-value>
+        <param-value>WEB-INF/app-context.xml</param-value>
     </context-param>
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+
     </listener>
 
-    <listener>
+   <listener>
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
 
@@ -24,8 +25,8 @@
         <servlet-name>Jersey Servlet</servlet-name>
         <servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
         <init-param>
-            <param-name>com.sun.jersey.config.property.package</param-name>
-            <param-value>classpath:com.sk.pongme.rest</param-value>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.sk.pongme.rest</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
 

@@ -5,6 +5,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.geo.Distance;
 import org.springframework.data.mongodb.core.geo.Point;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
+@Component
 public interface PointRepository extends MongoRepository<PointData, ObjectId> {
 
     PointData findByTitle(String title);
