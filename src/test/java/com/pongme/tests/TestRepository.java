@@ -1,6 +1,6 @@
 package com.pongme.tests;
 
-import com.sk.pongme.data.IPointRepository;
+import com.sk.pongme.data.PointRepository;
 import com.sk.pongme.domain.PointData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +27,7 @@ import static org.fest.assertions.Assertions.assertThat;
 public class TestRepository {
 
     @Inject
-    IPointRepository pr;
+    PointRepository pr;
 
     @Inject
     MongoTemplate mongoTemplate;
@@ -41,13 +41,11 @@ public class TestRepository {
     @Test
     public void should_exist_a_database_named_pongme(){
         assertThat(mongoTemplate.getDb().getName()).as("DB configured as Pongme").isEqualTo("pongme");
-
     }
 
     @Test
     public void should_exist_adequate_collections_in_pongmeDB(){
-        assertThat(mongoTemplate.getDb().getCollection("pointData")).isNotNull();
-
+       assertThat(mongoTemplate.getDb().getCollection("pointData")).isNotNull();
     }
 
     @Test
@@ -77,24 +75,35 @@ public class TestRepository {
 
     @Test
     public void should_given_point_in_neighborhood(){
-
         double lon = 2.4078668;
         double lat = 48.8373613;
 
         //Find all the Points near pointData in a close distance of 500 meters
-
         List<PointData> listPoints = pr.findByLocationNear(
                 new org.springframework.data.mongodb.core.geo.Point(lon,lat),
                 new Distance(0.5, Metrics.KILOMETERS)  );
-
-
         assertThat(listPoints).isNotNull();
         assertThat(listPoints).isNotEmpty();
         assertThat(listPoints.contains(pr.findByTitle("Micocoulier de Provence"))).isEqualTo(true);
         assertThat(listPoints.contains(pr.findByTitle("Aquarium Tropical"))).isEqualTo(true);
-
-
-
     }
+
+    @Test
+       public void should_given_point_in_neighborhood_with_given_category(){
+
+           double lon = 2.4078668;
+           double lat = 48.8373613;
+           String category = "musees";
+
+           //Find all the Points near pointData in a close distance of 500 meters
+           List<PointData> listPoints = pr.findByLocationNearAndCategory(
+                   new org.springframework.data.mongodb.core.geo.Point(lon,lat),
+                   new Distance(0.5, Metrics.KILOMETERS),
+                   category);
+           assertThat(listPoints).isNotNull();
+           assertThat(listPoints).isNotEmpty();
+           assertThat(listPoints.contains(pr.findByTitle("Micocoulier de Provence"))).isEqualTo(false);
+           assertThat(listPoints.contains(pr.findByTitle("Aquarium Tropical"))).isEqualTo(true);
+       }
 
 }
