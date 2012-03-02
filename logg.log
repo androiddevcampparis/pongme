@@ -287,3 +287,168 @@
 19:08:46,435  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@343a9d95: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
 19:08:46,447  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@304caadb: startup date [Fri Mar 02 19:08:44 CET 2012]; root of context hierarchy
 19:08:46,453  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5e1645b9: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:05:13,135  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestRepository]: using defaults.
+20:05:14,198  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:05:15,788  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:05:15,840  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@676bd8ea: startup date [Fri Mar 02 20:05:15 CET 2012]; root of context hierarchy
+20:05:16,460  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:05:16,704  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f4d5bc9: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:05:32,954  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@676bd8ea: startup date [Fri Mar 02 20:05:15 CET 2012]; root of context hierarchy
+20:05:33,177  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f4d5bc9: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:05:39,304  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestPointRestEndPoint]: using defaults.
+20:05:39,537  INFO log:? - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+20:05:39,715  INFO log:? - jetty-6.1.9
+20:05:40,304  INFO log:? - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+20:05:40,707  INFO /:? - Initializing Spring root WebApplicationContext
+20:05:40,709  INFO ContextLoader:272 - Root WebApplicationContext: initialization started
+20:05:41,041  INFO XmlWebApplicationContext:495 - Refreshing Root WebApplicationContext: startup date [Fri Mar 02 20:05:41 CET 2012]; root of context hierarchy
+20:05:41,221  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/app-context.xml]
+20:05:43,010  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@494b6bed: defining beans [mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory]; root of factory hierarchy
+20:05:43,938  INFO ContextLoader:301 - Root WebApplicationContext: initialization completed in 3228 ms
+20:05:47,440  INFO log:? - Started SocketConnector@0.0.0.0:9000
+20:05:47,887  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:05:48,273  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:05:48,309  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@cf546f8: startup date [Fri Mar 02 20:05:48 CET 2012]; root of context hierarchy
+20:05:48,497  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:05:48,556  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4446a5c4: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:05:50,368 ERROR log:? - /api/poi/2.4078668+48.8373613+arbre
+java.lang.NullPointerException
+	at com.sk.pongme.rest.PointEndpoint.findNearestPoints(PointEndpoint.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:362)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:726)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:405)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:505)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:828)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:514)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:380)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:450)
+20:05:50,760  INFO /:? - Closing Spring root WebApplicationContext
+20:05:50,763  INFO XmlWebApplicationContext:1020 - Closing Root WebApplicationContext: startup date [Fri Mar 02 20:05:41 CET 2012]; root of context hierarchy
+20:05:50,767  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@494b6bed: defining beans [mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory]; root of factory hierarchy
+20:05:50,932  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@cf546f8: startup date [Fri Mar 02 20:05:48 CET 2012]; root of context hierarchy
+20:05:51,085  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4446a5c4: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:15:22,661  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestRepository]: using defaults.
+20:15:25,289  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:15:44,737  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:15:45,563  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@3e110003: startup date [Fri Mar 02 20:15:45 CET 2012]; root of context hierarchy
+20:15:50,684  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:15:51,984  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c6ed322: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:16:01,113  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@3e110003: startup date [Fri Mar 02 20:15:45 CET 2012]; root of context hierarchy
+20:16:01,188  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5c6ed322: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:16:08,620  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestPointRestEndPoint]: using defaults.
+20:16:08,824  INFO log:? - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+20:16:08,973  INFO log:? - jetty-6.1.9
+20:16:09,545  INFO log:? - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+20:16:09,878  INFO /:? - Initializing Spring root WebApplicationContext
+20:16:09,879  INFO ContextLoader:272 - Root WebApplicationContext: initialization started
+20:16:10,229  INFO XmlWebApplicationContext:495 - Refreshing Root WebApplicationContext: startup date [Fri Mar 02 20:16:10 CET 2012]; root of context hierarchy
+20:16:10,418  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/app-context.xml]
+20:16:12,245  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@494eaec9: defining beans [mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory]; root of factory hierarchy
+20:16:12,940  INFO ContextLoader:301 - Root WebApplicationContext: initialization completed in 3060 ms
+20:16:17,188  INFO log:? - Started SocketConnector@0.0.0.0:9000
+20:16:17,573  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:16:19,994  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:16:20,116  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@1a005861: startup date [Fri Mar 02 20:16:20 CET 2012]; root of context hierarchy
+20:16:21,990  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:16:22,335  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e40f7a8: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:16:25,548 ERROR log:? - /api/poi/2.4078668+48.8373613+arbre
+java.lang.NullPointerException
+	at com.sk.pongme.rest.PointEndpoint.findNearestPoints(PointEndpoint.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:487)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:362)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:726)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:405)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:505)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:828)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:514)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:211)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:380)
+	at org.mortbay.jetty.bio.SocketConnector$Connection.run(SocketConnector.java:228)
+	at org.mortbay.thread.BoundedThreadPool$PoolThread.run(BoundedThreadPool.java:450)
+20:16:26,161  INFO /:? - Closing Spring root WebApplicationContext
+20:16:26,205  INFO XmlWebApplicationContext:1020 - Closing Root WebApplicationContext: startup date [Fri Mar 02 20:16:10 CET 2012]; root of context hierarchy
+20:16:26,220  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@494eaec9: defining beans [mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory]; root of factory hierarchy
+20:16:26,315  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@1a005861: startup date [Fri Mar 02 20:16:20 CET 2012]; root of context hierarchy
+20:16:26,335  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e40f7a8: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:33:08,682  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestRepository]: using defaults.
+20:33:10,057  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:33:12,446  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:33:12,552  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@676bd8ea: startup date [Fri Mar 02 20:33:12 CET 2012]; root of context hierarchy
+20:33:13,072  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:33:14,485  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@19202d69: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:33:23,812  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@676bd8ea: startup date [Fri Mar 02 20:33:12 CET 2012]; root of context hierarchy
+20:33:24,594  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@19202d69: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:33:30,939  INFO TestContextManager:185 - @TestExecutionListeners is not present for class [class com.pongme.tests.TestPointRestEndPoint]: using defaults.
+20:33:31,182  INFO log:? - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+20:33:31,340  INFO log:? - jetty-6.1.9
+20:33:31,932  INFO log:? - NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+20:33:32,833  INFO /:? - Initializing Spring root WebApplicationContext
+20:33:32,835  INFO ContextLoader:272 - Root WebApplicationContext: initialization started
+20:33:33,650  INFO XmlWebApplicationContext:495 - Refreshing Root WebApplicationContext: startup date [Fri Mar 02 20:33:33 CET 2012]; root of context hierarchy
+20:33:34,116  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/app-context.xml]
+20:33:37,633  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:33:38,119  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:33:38,250  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@495c998a: defining beans [pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:33:44,955  INFO ContextLoader:301 - Root WebApplicationContext: initialization completed in 12118 ms
+20:33:58,251  INFO log:? - Started SocketConnector@0.0.0.0:9000
+20:33:59,006  INFO XmlBeanDefinitionReader:315 - Loading XML bean definitions from class path resource [app-context.xml]
+20:33:59,560  INFO ClassPathBeanDefinitionScanner:209 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+20:33:59,597  INFO GenericApplicationContext:495 - Refreshing org.springframework.context.support.GenericApplicationContext@1be2f6b0: startup date [Fri Mar 02 20:33:59 CET 2012]; root of context hierarchy
+20:33:59,754  INFO AutowiredAnnotationBeanPostProcessor:139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+20:33:59,796  INFO DefaultListableBeanFactory:557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1dcbcf91: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:34:17,606  INFO /:? - Closing Spring root WebApplicationContext
+20:34:17,643  INFO XmlWebApplicationContext:1020 - Closing Root WebApplicationContext: startup date [Fri Mar 02 20:33:33 CET 2012]; root of context hierarchy
+20:34:17,645  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@495c998a: defining beans [pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.data.mongodb.core.MongoFactoryBean#0,org.springframework.beans.factory.config.CustomEditorConfigurer#0,mongoDbFactory,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+20:34:18,756  INFO GenericApplicationContext:1020 - Closing org.springframework.context.support.GenericApplicationContext@1be2f6b0: startup date [Fri Mar 02 20:33:59 CET 2012]; root of context hierarchy
+20:34:19,329  INFO DefaultListableBeanFactory:433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1dcbcf91: defining beans [org.springframework.beans.factory.config.CustomEditorConfigurer#0,org.springframework.beans.factory.config.CustomEditorConfigurer#1,mongo,pointRepository,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,pointEndpoint,admin,dataLoader,mongoTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy

@@ -9,16 +9,11 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-          <root url="file://$MODULE_DIR$/target/generated-sources/annotations" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="web: application context" name="MVC application context" removed="false">
+        <fileset id="web: application context" name="MVC application context" removed="false" profiles="default">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/app-context.xml</file>
           <file>file://$MODULE_DIR$/src/test/resources/app-context.xml</file>
         </fileset>

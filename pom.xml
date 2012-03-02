@@ -20,6 +20,15 @@
         <org.cloudfoundry-version>0.6.1</org.cloudfoundry-version>
     </properties>
 
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repository.springframework.maven.milestone</id>
+            <name>Spring Framework Maven Milestone Repository</name>
+            <url>http://maven.springframework.org/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <repositories>
 
         <repository>
@@ -291,7 +300,25 @@
     </dependencies>
     <build>
 
+
         <plugins>
+            <plugin>
+                <groupId>org.cloudfoundry</groupId>
+                <artifactId>cf-maven-plugin</artifactId>
+                <version>1.0.0.M1</version>
+                <configuration>
+                    <server>pongme</server>
+                    <target>http://api.cloudfoundry.com</target>
+                    <url>pongme.cloudfoundry.com</url>
+                    <memory>512</memory>
+                    <instances>1</instances>
+                    <services>
+                        <service>mongo-stoxx</service>
+                    </services>
+                </configuration>
+            </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
