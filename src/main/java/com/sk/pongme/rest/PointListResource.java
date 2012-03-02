@@ -1,5 +1,6 @@
 package com.sk.pongme.rest;
 
+import com.google.common.base.Objects;
 import com.sk.pongme.domain.PointData;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,7 +13,7 @@ import java.util.List;
  * Time: 5:49 PM
  * To change this template use File | Settings | File Templates.
  */
-@XmlRootElement(name = "pointList")
+@XmlRootElement
 public class PointListResource {
     private List<PointData> pointDataList;
 
@@ -30,5 +31,10 @@ public class PointListResource {
 
     public void setPointDataList(List<PointData> pointDataList) {
         this.pointDataList = pointDataList;
+    }
+    
+    public String toString(){
+        return Objects.toStringHelper(pointDataList).toString();
+        
     }
 }

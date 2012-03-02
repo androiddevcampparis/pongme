@@ -1,11 +1,18 @@
 package com.pongme.tests;
 
+import com.pongme.tests.com.pongme.tests.util.AbstractWebRunnerClass;
+import com.sk.pongme.data.PointRepository;
+import com.sk.pongme.rest.PointListResource;
+import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.test.framework.JerseyTest;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import javax.inject.Inject;
+import javax.ws.rs.core.Response;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -19,35 +26,42 @@ import static org.fest.assertions.Assertions.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/app-context.xml")
-public class TestPointRestEndPoint extends JerseyTest{
+public class TestPointRestEndPoint extends AbstractWebRunnerClass{// extends JerseyTest{
+    static Logger logger = Logger.getLogger(TestPointRestEndPoint.class);
 
-    public TestPointRestEndPoint()
-    {
-        super("com.sk.pongme.rest");
-        /* Map<String, String> contextParams = new HashMap<String, String>();
-        contextParams.put("contextConfigLocation", "classpath:applicationContext.xml");
-        ApplicationDescriptor appDescriptor = new ApplicationDescriptor()
-                .setContextPath(your-context-path)
-                .setRootResourcePackageName(your-root-resource-package-name)
-        .setServletClass(com.sun.jersey.spi.spring.container.servlet.SpringServlet.class)
-            .setContextListenerClassName("org.springframework.web.context.ContextLoaderListener")
-            .setContextParams(contextParams);
-        super.setupTestEnvironment(appDescriptor);*/
-    }
+    @Inject
+    PointRepository pointRepository;
+
+
+    
 
 
     @Test
-    public void should_find_near_points_via_rest(){
-        double lon = 2.4078668;
-        double lat = 48.8373613;
+    public void should_find_near_points_via_rest_call_with_jetty(){
+        WebResource resource = getResource("api/poi/2.4078668+48.8373613+arbre");
+        ClientResponse clientResponse = resource.get(ClientResponse.class);
+        //Validate Response
+        assertThat(Response.Status.OK.getStatusCode()).isEqualTo(clientResponse.getStatus());
 
-        WebResource webResource = resource();
-        String responseMsg = webResource.path("api/poi/2.4078668+48.8373613").
-                get(String.class);
-        System.out.println(responseMsg);/*
-        assertThat(responseMsg).isNotNull();
-        assertThat(responseMsg).isNotEmpty();*/
-        assertThat("").isEmpty();
+
+        PointListResource receivedPointListResource = resource.get(PointListResource.class);
+        assertThat(receivedPointListResource).isNotNull();
+        assertThat(receivedPointListResource.getPointDataList()).isNotNull();
+        /*assertThat(receivedPointListResource.getPointDataList()
+                                           .get(0)
+                                           .getLocation()
+                                           .equals(new double[]{2.4078668,48.8373613})
+                                          ).isTrue();
+*/
+
+    }
+
+    @Test
+    public void should_fail_with_wrong_url(){
+        WebResource resource = getResource("api/poi/blabla");
+        ClientResponse clientResponse = resource.get(ClientResponse.class);
+        //Validate Response
+        assertThat(Response.Status.BAD_REQUEST.getStatusCode()).isEqualTo(clientResponse.getStatus());
 
     }
 

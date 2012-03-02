@@ -29,6 +29,7 @@ public class PointEndpoint {
     }
 
 
+
     @GET
     @Path("/poi/{requesturl}")
     @Produces("application/json")

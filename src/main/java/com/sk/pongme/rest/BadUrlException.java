@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
  */
 public class BadUrlException extends WebApplicationException {
     public BadUrlException(String message){
-        super(Response.status(405).
+        super(Response.status(400).
                 entity(message).
                 type(MediaType.APPLICATION_JSON_TYPE).
                 build());
